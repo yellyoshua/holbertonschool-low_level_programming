@@ -7,3 +7,4 @@ int main(void)
 	puts(message);
 	return (0);
 }
+
