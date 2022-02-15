@@ -1,11 +1,10 @@
 #include "main.h"
-
 /**
- *	_isLower - validate lower case character
- *	@c: value for validate
- *	Return: Always 0 (Pass)
+ * _islower - checks for lowercase character
+ * @c: value for validate
+ * Return: Always 0;
  */
-int _isLower(int c)
+int _islower(int c)
 {
 	if ((c >= 'a') && (c <= 'z'))
 	{
