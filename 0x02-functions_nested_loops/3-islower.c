@@ -7,11 +7,6 @@
  */
 int _isLower(int c)
 {
-	/*
-	 * should validate if c is
-	 * is lowercase
-	 */
-
 	if ((c >= 'a') && (c <= 'z'))
 	{
 		return (1);
