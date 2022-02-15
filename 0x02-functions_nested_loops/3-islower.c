@@ -2,17 +2,17 @@
 
 /**
  *	_isLower - validate lower case character
- *	@character: value for validate
+ *	@c: value for validate
  *	Return: Always 0 (Pass)
  */
-int _isLower(int character)
+int _isLower(int c)
 {
 	/*
-	 * should validate if character is
+	 * should validate if c is
 	 * is lowercase
 	 */
 
-	if ((character >= 'a') && (character <= 'z'))
+	if ((c >= 'a') && (c <= 'z'))
 	{
 		return (1);
 	}
