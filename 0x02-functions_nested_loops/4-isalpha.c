@@ -1,12 +1,12 @@
 #include "main.h"
 /**
- * _isalpha - checks for uppercase character
+ * _isalpha - checks for alphabetic character
  * @c: value for validate
  * Return: Always 0;
  */
 int _isalpha(int c)
 {
-	if ((c >= 'A') && (c <= 'Z'))
+	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
 	{
 		return (1);
 	}
