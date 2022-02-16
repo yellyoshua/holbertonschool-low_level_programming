@@ -1,36 +1,36 @@
 #include "main.h"
 
 /**
-	*	times_table - prints multiplication table
-	* Return: Always 0 (Success)
-	*/
+ * times_table - prints multiplication table
+ * Return: Always 0 (Success)
+ */
 void times_table(void)
 {
-	int rows;
-	int cols;
-	int result;
+	int i, j, k;
 
-	for (rows = 0; rows < 10; rows++)
+	for (i = 0; i < 10; i++)
 	{
-		for (cols = 0; cols < 10; cols++)
+		for (j = 0; j < 10; j++)
 		{
-			result = cols * rows;
-
-			if (result >= 10)
+			k = j * i;
+			if (j == 0)
 			{
-				_putchar((result / 10) + '0');
-				_putchar((result % 10) + '0');
+				_putchar(k + '0');
 			}
 
-			if (result < 10)
-			{
-				_putchar(result + '0');
-			}
-			if (!(cols + 1 == 10))
+			if (k < 10 && j != 0)
 			{
 				_putchar(',');
 				_putchar(' ');
 				_putchar(' ');
+				_putchar(k + '0');
+			}
+			else if (k >= 10)
+			{
+				_putchar(',');
+				_putchar(' ');
+				_putchar((k / 10) + '0');
+				_putchar((k % 10) + '0');
 			}
 		}
 		_putchar('\n');
