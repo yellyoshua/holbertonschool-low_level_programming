@@ -1,5 +1,10 @@
 #include <stdio.h>
 
+/**
+	* main - main entry of the app
+	* @void: no argument
+	* Return: Always 0 (Success)
+	*/
 int main(void)
 {
 	int i;
