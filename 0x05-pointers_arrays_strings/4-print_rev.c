@@ -16,7 +16,7 @@ void print_rev(char *s)
 		textLenght++;
 	}
 
-	for (revIterator = textLenght; revIterator >= textLenght; revIterator--)
+	for (revIterator = textLenght; s[revIterator] != '\0'; revIterator--)
 	{
 		_putchar(s[revIterator]);
 	}
