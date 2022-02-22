@@ -6,17 +6,16 @@
 	*/
 void print_rev(char *s)
 {
-	int iterator;
-	int textLenght;
-	int revIterator;
+	int iterator = 0;
+	int textLenght = 0;
+	int revIterator = 0;
 
-	textLenght = 0;
-	for (iterator = 0; s[iterator] != '\0'; iterator++)
+	for (; s[iterator] != '\0'; iterator++)
 	{
 		textLenght++;
 	}
 
-	for (revIterator = textLenght; s[revIterator] != '\0'; revIterator--)
+	for (revIterator = textLenght - 1; s[revIterator] != '\0'; revIterator--)
 	{
 		_putchar(s[revIterator]);
 	}
