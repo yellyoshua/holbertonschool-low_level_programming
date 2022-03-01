@@ -2,9 +2,10 @@
 
 /**
  * _memset - fills memory with a constant byte
- * @b:
- * @n:
- * Returns: Always 0 (Success)
+ * @s: dest
+ * @b: src
+ * @n: n to slice src
+ * Return: Always 0 (Success)
  */
 char *_memset(char *s, char b, unsigned int n)
 {
@@ -14,4 +15,6 @@ char *_memset(char *s, char b, unsigned int n)
 	{
 		s[i] = b;
 	}
+
+	return (s);
 }
