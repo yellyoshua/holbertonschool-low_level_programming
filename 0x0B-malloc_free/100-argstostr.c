@@ -15,9 +15,6 @@ int sumMatriz(int ac, char **av)
 
 	for (; i < ac; i++)
 	{
-		if (av[i] == NULL)
-			return (NULL);
-
 		for (j = 0; av[i][j] != '\0'; j++)
 			c++;
 		c++;
@@ -35,13 +32,16 @@ int sumMatriz(int ac, char **av)
 char *argstostr(int ac, char **av)
 {
 	char *out;
-	int c = 0,
-			i = 0,
-			j = 0,
-			ia = 0;
+	int c = 0, i = 0, j = 0, ia = 0;
 
 	if (ac == 0)
 		return (NULL);
+
+	for (; i < ac; i++)
+	{
+		if (av[i] == NULL)
+			return (NULL);
+	}
 
 	c = sumMatriz(ac, av);
 
@@ -53,7 +53,7 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 	}
 
-	for (; ia < c; j++, ia++)
+	for (i = 0; ia < c; j++, ia++)
 	{
 		if (av[i][j] == '\0')
 		{
