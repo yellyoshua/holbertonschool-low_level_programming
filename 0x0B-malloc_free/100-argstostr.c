@@ -2,20 +2,18 @@
 #include <stdlib.h>
 
 /**
- * argstostr - concatenates all the arguments of a program
+ * sumMatriz - return a length of a matriz
  * @ac: count
  * @av: vector
  * Return: Always 0 (Success)
  */
-char *argstostr(int ac, char **av)
+int sumMatriz(int ac, char **av)
 {
-	char *out;
-	int c, i, j, ia;
+	int c = 0,
+			i = 0,
+			j = 0;
 
-	if (ac == 0)
-		return (NULL);
-
-	for (c = i = 0; i < ac; i++)
+	for (; i < ac; i++)
 	{
 		if (av[i] == NULL)
 			return (NULL);
@@ -25,6 +23,28 @@ char *argstostr(int ac, char **av)
 		c++;
 	}
 
+	return (c);
+}
+
+/**
+ * argstostr - concatenates all the arguments of a program
+ * @ac: count
+ * @av: vector
+ * Return: Always 0 (Success)
+ */
+char *argstostr(int ac, char **av)
+{
+	char *out;
+	int c = 0,
+			i = 0,
+			j = 0,
+			ia = 0;
+
+	if (ac == 0)
+		return (NULL);
+
+	c = sumMatriz(ac, av);
+
 	out = malloc((c + 1) * sizeof(char));
 
 	if (out == NULL)
@@ -32,10 +52,6 @@ char *argstostr(int ac, char **av)
 		free(out);
 		return (NULL);
 	}
-
-	i = 0;
-	j = 0;
-	ia = 0;
 
 	for (; ia < c; j++, ia++)
 	{
