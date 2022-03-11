@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * calloc - replicate calloc functionality
+ * _calloc - replicate calloc functionality
  * @size: size of each element
  * @nmemb: number of members
  * Return: Always 0 (Success)
