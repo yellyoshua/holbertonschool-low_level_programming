@@ -10,7 +10,7 @@
  */
 char *_strcpy(char *dest, char *src)
 {
-	int len, i, len = 0;
+	int len = 0, i = 0;
 
 	while (src[len] != '\0')
 	{
@@ -64,4 +64,12 @@ dog_t *new_dog(char *name, float age, char *owner)
 	dog->age = age;
 
 	return (dog);
+}
+int main(void)
+{
+	dog_t *my_dog;
+
+	my_dog = new_dog("Poppy", 3.5, "Bob");
+	printf("My name is %s, and I am %.1f :) - Woof!\n", my_dog->name, my_dog->age);
+	return (0);
 }
